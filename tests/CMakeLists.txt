@@ -1,0 +1,20 @@
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+macro (add_test _name)
+	add_executable(${_name} "test_${_name}.cpp")
+    target_link_libraries(${_name} OCEAN-Protocols) 
+endmacro()
+
+# Tests
+add_test(relu)
+add_test(conv)
+add_test(reluconvFIT)
+add_test(reluconvKDInfer)
+add_test(ResNet50_FIT)
+add_test(ResNet50_KD_Infer)
+add_test(ResNet34_FIT)
+add_test(ResNet34_KD_Infer)
+add_test(VGG11_FIT)
+add_test(VGG11_KD_Infer)
+add_test(AlexNet_FIT)
+add_test(AlexNet_KD_Infer)
