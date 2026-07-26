@@ -5,7 +5,7 @@
 ## you should authorize this file to be excutable by typing the following command in current directory: chmod 755 netconfig.sh
 ## to delete the networking setting, type: ./netconfig.sh del
 ## to simulate a lan, type: ./netconfig.sh lan
-## to simulate a wan, type: ./netconfig.sh wan[1/2/3]
+## to simulate a wan, type: ./netconfig.sh wan
 ## to test the delay, use ping
 ## to test the bandwidth, use iperf3
 
