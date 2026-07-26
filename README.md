@@ -1,6 +1,6 @@
-# KDInfer
+# KD-Infer
 
-KDInfer is a repository for efficient private inference that is able to utilze all zeros, duplicates as well as unique values in scaled model weights without retraining or sparsity pattern disclosure, and with much more flexibility for input batch processing.
+This is the implementation of KD-Infer for efficient private inference that is able to utilize all zeros, duplicates as well as unique values in scaled model weights without retraining, and with much more flexibility for input batch processing.
 
 ## Setup and Build
 
@@ -17,7 +17,7 @@ Required packages are listed in `auto_run_cmake.sh`. If automatic installation d
 Configure the network bandwidth and round trip time using:
 
 ```bash
-./netconfig.sh [lan/wan1/wan2/wan3]
+./netconfig.sh [lan/wan]
 ```
 
 ## Model and Input Preparation
@@ -32,11 +32,11 @@ Prepare the models and inputs by running the scripts in the `src/ModelAndInput/`
 
 ## Testing
 
-All test codes are located in the `tests/` folder. You can add additional tests by modifying the `CMakeLists.txt` file.
+All test codes are located in the `tests/` folder, and this repo implements the OT in IKNP style which is adopted in CrypTFlow2 while it can be replaced with the VOLE style adopted in Cheetah. Moreover, you can add additional tests by modifying the `CMakeLists.txt` file.
 
 To run the tests, navigate to the `build/bin` directory where the executables are located. Run the following commands in a terminal:
 
-- To simulate the server: `./[test name] r=2`
-- To simulate the client: `./[test name] r=1`
+- To simulate the server: `./[test name] r=1`
+- To simulate the client: `./[test name] r=2`
 
 Replace `[test name]` with the actual name of the test executable.
