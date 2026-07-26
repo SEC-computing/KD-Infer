@@ -1,6 +1,6 @@
 # KD-Infer
 
-This is the implementation of KD-Infer for efficient private inference that is able to utilize all zeros, duplicates as well as unique values in scaled model weights without retraining, and with much more flexibility for input batch processing.
+This is the implementation of KD-Infer for efficient private inference that is able to utilize all zeros, duplicates as well as unique values in scaled raw model weights without retraining, and with much more flexibility for input volume at offline.
 
 ## Setup and Build
 
